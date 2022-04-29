@@ -1,0 +1,127 @@
+
+#main-container {
+    width: 95%;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #1B1D1F;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* the title */
+
+#heading {
+    /* text-align: center; */
+    font-family: Jost, sans-serif;
+    padding-top: 90px;
+    padding-bottom: 20px;
+}
+
+h4 {
+    letter-spacing: 0.2em;
+    font-weight: 300;
+    transform: scale(0.9);
+}
+
+/* the pasta */
+
+#pasta-main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#pasta-main div {
+    display: inline-block;
+}
+
+#pasta-main h3 {
+    margin: 0!important;
+    padding: 5px 30px;
+    font-size: 80px;
+    font-family: Jost, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;     
+    position: relative;
+    z-index: 5; 
+}
+
+/* the button */
+
+#discover-btn {
+    background: transparent;
+    border: 1px solid white;
+    padding: 17px 40px;
+    color: white;
+    font-family: Jost, sans-serif;
+    font-weight: 300;
+    letter-spacing: 00.02em;
+    transform: scale(1.2);
+    margin-bottom: 120px;
+    margin-top: 80px;
+    border-radius: 2px;
+    transition: background-color 0.15s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+#discover-btn:hover {
+    background-color: white;
+    color: #303133;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+/* the background images */
+
+.pasta-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 725px;
+    z-index: 2;
+    transition: transform 0.2s ease-out;
+}
+
+.pasta-img img {
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%);  
+    visibility: hidden;      
+    opacity: 0;
+    transition: opacity 0.3s ease-out, visibility 0s linear 0.2s;
+}
+
+/* hover effects */
+
+/* pasta name "spotlight" */
+#pasta-main:hover h3 {
+    opacity: 0.25;
+}
+
+#pasta-main h3:hover  {
+    opacity: 1;
+    cursor: pointer;
+}
+
+h3:hover ~ .pasta-img img {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* responsive behavior */
+
+@media (max-width: 752px) {
+    #pasta-main div {
+        display: block;
+    }
+
+    #pasta-main h3 {
+        font-size: 50px;
+        line-height: 1.6em;
+    }
+
+    .pasta-img {
+        width: 338px;
+    }
+}
